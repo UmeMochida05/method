@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet var label: UILabel!
     @IBOutlet var button: UIButton!
     
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +22,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func buttonTapped(_ sender: UIButton) {
-        if let number1text = number1textfield.text, let number2text = number2textfield.text, let number1 = Int(number1text), let number2 = Int(number2text) {
+        if let number1text = number1textfield.text, let number2text = number2textfield.text, var number1 = Int(number1text), var number2 = Int(number2text) {
             let sum = number1 + number2
             label.text = String(sum)
         } else {
